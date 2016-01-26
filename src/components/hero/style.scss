@@ -1,0 +1,21 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 400px;
+  color: #fff;
+  margin-bottom: 1em;
+}
+
+.hero--red {
+  background: red;
+}
+
+.hero--blue {
+  background: blue;
+}
+
+.hero__heading {
+  font-size: 2em;
+}
