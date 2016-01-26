@@ -7,7 +7,8 @@
   "scripts": {
     "build": "webpack --progress --colors",
     "build:prod": "npm run build -- --optimize-minimize",
-    "start": "nodemon"
+    "dev": "NODE_ENV=development nodemon --ignore src/components",
+    "start": "npm run build && node server.js"
   },
   "engines": {
     "node": ">=4.0"
@@ -30,6 +31,8 @@
     "postcss-loader": "^0.8.0",
     "sass-loader": "^3.1.2",
     "style-loader": "^0.13.0",
-    "webpack": "^1.12.12"
+    "webpack": "1.12.12",
+    "webpack-dev-middleware": "1.5.1",
+    "webpack-hot-middleware": "2.6.4"
   }
 }

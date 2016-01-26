@@ -1,10 +1,10 @@
 var path = require('path');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var webpack = require('webpack');
 var autoprefixer = require('autoprefixer');
 
 module.exports = {
   entry: {
-    client: './src/client.js'
+    client: ['./src/client.js', 'webpack-hot-middleware/client']
   },
 
   output: {
@@ -26,7 +26,7 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract('style', 'css!postcss!sass')
+        loader: 'style!css!postcss!sass'
       }
     ]
   },
@@ -36,6 +36,8 @@ module.exports = {
   ],
 
   plugins: [
-    new ExtractTextPlugin('style.css', { allChunks: true })
+    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin()
   ]
 };
