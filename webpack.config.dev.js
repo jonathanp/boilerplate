@@ -26,7 +26,7 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        loader: 'style!css!postcss!sass'
+        loader: 'style!css!postcss!sass!import-glob'
       }
     ]
   },
