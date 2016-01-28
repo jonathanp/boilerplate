@@ -9,7 +9,7 @@ var Button = function(props) {
 };
 
 Button.propTypes = {
-  color: React.PropTypes.string,
+  color: React.PropTypes.oneOf(['red', 'blue']),
   label: React.PropTypes.string.isRequired
 };
 
