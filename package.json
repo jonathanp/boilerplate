@@ -3,13 +3,13 @@
   "title": "Boilerplate",
   "version": "0.1.0",
   "private": true,
-  "main": "server.js",
+  "main": "lib/server.js",
   "author": "Jonathan Persson <persson.jonathan@gmail.com>",
   "scripts": {
     "build": "webpack --progress --colors",
     "build:prod": "npm run build -- --optimize-minimize",
     "dev": "NODE_ENV=development nodemon --ignore src/components",
-    "start": "npm run build && node server.js",
+    "start": "npm run build && node lib/server.js",
     "styleguide:dev": "styleguidist server",
     "styleguide:build": "styleguidist build"
   },
