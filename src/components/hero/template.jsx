@@ -8,6 +8,8 @@ var Hero = function(props) {
   );
 };
 
+Hero.displayName = 'Hero';
+
 Hero.propTypes = {
   color: React.PropTypes.string,
   heading: React.PropTypes.string.isRequired
