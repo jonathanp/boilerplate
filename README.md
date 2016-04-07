@@ -60,3 +60,9 @@ $ npm run styleguide:dev
 ```
 $ npm run styleguide:build
 ```
+
+### Lint the source JS and stylesheets
+
+```
+$ npm run lint
+```
