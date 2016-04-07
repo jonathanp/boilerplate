@@ -11,7 +11,8 @@
     "dev": "NODE_ENV=development nodemon --ignore src/components",
     "start": "npm run build && node lib/server.js",
     "styleguide:dev": "styleguidist server",
-    "styleguide:build": "styleguidist build"
+    "styleguide:build": "styleguidist build",
+    "lint": "stylelint src/**/*.scss || true"
   },
   "engines": {
     "node": ">=4.0"
@@ -37,6 +38,8 @@
     "react-styleguidist": "2.1.0",
     "sass-loader": "3.2.0",
     "style-loader": "0.13.1",
+    "stylelint": "5.3.0",
+    "stylelint-config-standard": "4.0.1",
     "webpack": "1.12.14",
     "webpack-dev-middleware": "1.6.1",
     "webpack-hot-middleware": "2.10.0"
