@@ -10,13 +10,13 @@
     "build:prod": "npm run build -- --optimize-minimize",
     "dev": "NODE_ENV=development nodemon --ignore src/components",
     "start": "npm run build && node lib/server.js",
-
     "styleguide:dev": "styleguidist server",
     "styleguide:build": "styleguidist build",
-
-    "lint:css": "stylelint src/**/*.scss || true",
-    "lint:js": "eslint src/components/**/*.{js,jsx} || true",
-    "lint": "npm run lint:css && npm run lint:js"
+    "lint:css": "stylelint src/**/*.scss",
+    "lint:js": "eslint src/components/**/*.{js,jsx}",
+    "lint": "npm run lint:css && npm run lint:js",
+    "test": "npm run lint",
+    "prepush": "npm test"
   },
   "engines": {
     "node": ">=4.0"
@@ -35,6 +35,7 @@
     "eslint-plugin-react": "4.3.0",
     "extract-text-webpack-plugin": "1.0.1",
     "glob": "7.0.3",
+    "husky": "0.11.4",
     "import-glob-loader": "1.1.0",
     "node-sass": "3.4.2",
     "nodemon": "1.9.1",
