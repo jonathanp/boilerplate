@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "private": true,
   "main": "lib/server.js",
-  "author": "Jonathan Persson <persson.jonathan@gmail.com>",
+  "author": "Jonathan Svenheden <jonathan@svenheden.com>",
   "scripts": {
     "build": "webpack --progress --colors",
     "build:prod": "npm run build -- --optimize-minimize",
